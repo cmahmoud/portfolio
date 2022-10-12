@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "private": false,
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cmahmoud/portfolio.git"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
