@@ -5,10 +5,12 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        scroll-behavior: smooth !important;
+    }
     html,
     body {
         font-family: "Poppins", sans-serif;
-        scroll-behavior: smooth;
         -webkit-tap-highlight-color: transparent;
     }
     .menu {

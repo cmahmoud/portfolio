@@ -1,56 +1,104 @@
-import Link from "next/link";
 import * as React from "react";
+import User from "data/me";
 
 const About: React.FC = (): JSX.Element => {
     return (
-        <div
-            id="about"
-            className="flex flex-col md:flex-row items-center gap-2 md:gap-8 mb-4"
-        >
-            <div className="order-2 flex flex-col w-full md:w-1/2 h-auto overflow-hidden">
-                <h1 className="text-4xl font-bold mb-1">
-                    {"Hi, I'am Mahmoud"}
-                </h1>
-                <h2 className="text-xl font-medium mb-3 text-opacity-40 text-gray-900">
-                    Full-Stack Developer
-                </h2>
-                <p className="break-words text-opacity-70 text-gray-900 mb-6">
-                    Junior full stack developer with a passion for learning new
-                    technologies and working with teams to create user-friendly
-                    web applications.
-                </p>
-                <a
-                    href="mailto:cmahmoudv@gmail.com"
-                    className="block w-full md:w-1/2 text-center px-4 py-2 bg-primary text-white font-medium rounded-lg"
-                >
-                    Contact Me
-                </a>
-            </div>
-            <svg
-                viewBox="0 0 200 200"
-                xmlns="http://www.w3.org/2000/svg"
-                className="blob order-1 md:order-last w-full md:w-1/2 h-fit"
-            >
-                <defs>
-                    <clipPath id="user-avatar" clipPathUnits="userSpaceOnUse">
-                        <path
-                            fill="#FF0066"
-                            d="M51,-65.8C61.5,-52,62.2,-31.5,64.8,-12.1C67.5,7.3,72,25.7,66.4,41.2C60.9,56.6,45.3,69.1,29.4,70.5C13.4,71.8,-2.8,62.1,-18.9,54.9C-34.9,47.7,-50.8,43.1,-62.7,31.7C-74.6,20.3,-82.5,2.2,-79.5,-13.8C-76.4,-29.8,-62.4,-43.7,-47.3,-56.7C-32.2,-69.7,-16.1,-81.8,2.1,-84.3C20.2,-86.8,40.5,-79.6,51,-65.8Z"
-                            transform="translate(100 100)"
+        <section id="about" className="w-full mb-8">
+            <main className="flex flex-col md:flex-row justify-between gap-4 p-4 rounded-lg shadow-md">
+                <section className="flex items-center justify-center">
+                    <svg className="w-full md:max-w-fit h-52 rounded-lg">
+                        <image
+                            xlinkHref={User.photo}
+                            x="0"
+                            y="0"
+                            width="100%"
                         />
-                    </clipPath>
-                </defs>
-                <image
-                    x="0"
-                    y="10"
-                    width="100%"
-                    height="100%"
-                    clipPath="url(#user-avatar)"
-                    xlinkHref="/mahmoud.jpg"
-                    preserveAspectRatio="xMinYMin slice"
-                />
-            </svg>
-        </div>
+                    </svg>
+                </section>
+                <section className="w-full md:w-7/12">
+                    <header className="w-full mb-4">
+                        <p className="break-words font-medium text-gray-900/70">
+                            {User.summary}
+                        </p>
+                    </header>
+                    <main className="flex gap-4 mb-6">
+                        <div className="w-1/2 flex items-center md:justify-center gap-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 32 32"
+                                className="hidden md:block w-8 h-8 md:w-10 md:h-10 fill-gray-900"
+                            >
+                                <path d="M8.5 0a.5.5 0 0 0-.5.5V2H1.5a.5.5 0 0 0-.5.5c0 4.803 1.676 8.407 3.896 10.928 2.2 2.497 4.91 3.94 7.088 4.537.198.223.4.438.612.629.45.405.942.723 1.459.96a.5.5 0 0 0 .074.143s.143.192.28.451c.135.26.221.584.208.682-.028.21-.279.514-.582.738-.303.225-.594.356-.594.356a.5.5 0 0 0-.171.129c-.025.02-.074.02-.092.04a.821.821 0 0 0-.17.298 1.621 1.621 0 0 0-.084.55c0 .184.018.364.084.551.017.048.06.102.088.153-.012 1.178-.15 1.706-.399 2.076-.255.379-.744.712-1.494 1.375a.5.5 0 0 0-.025.021l-.01.01a.5.5 0 0 0-.088.102.5.5 0 0 0-.014.025.5.5 0 0 0-.011.017.5.5 0 0 0-.006.014.5.5 0 0 0-.043.139.5.5 0 0 0 0 .012.5.5 0 0 0-.006.064V29h-.352a.658.658 0 0 0-.648.65v1.702c0 .35.3.648.648.648h10.704a.656.656 0 0 0 .648-.648V29.65c0-.35-.3-.65-.648-.65h-.325v-1.5a.5.5 0 0 0-.29-.455c-.71-.621-1.187-.958-1.434-1.324-.25-.37-.387-.898-.399-2.078.028-.051.071-.105.088-.153a1.61 1.61 0 0 0 .082-.55c0-.185-.017-.366-.084-.553a.822.822 0 0 0-.172-.295.702.702 0 0 0-.244-.16s-.31-.158-.625-.399c-.314-.24-.558-.572-.57-.693-.011-.11.081-.437.217-.695a3.87 3.87 0 0 1 .277-.452.5.5 0 0 0 .072-.138 5.793 5.793 0 0 0 1.46-.961c.211-.191.413-.406.61-.63 2.178-.596 4.89-2.04 7.089-4.536C29.324 10.907 31 7.303 31 2.5a.5.5 0 0 0-.5-.5H24V.5a.5.5 0 0 0-.5-.5h-15zM9 1h14v1.924H9V1zM2.043 3H8v.424a.5.5 0 0 0 .002.049c0 .177.007.35.01.527H3.8a.5.5 0 0 0-.5.5c0 2.902 1.312 5.404 2.85 7.31 1.518 1.885 3.245 3.193 4.279 3.797.168.332.344.645.529.946a14.425 14.425 0 0 1-5.313-3.787C3.653 10.502 2.16 7.3 2.043 3zM24 3h5.957c-.116 4.301-1.61 7.502-3.603 9.766a14.425 14.425 0 0 1-5.313 3.787c.184-.3.36-.615.527-.946 1.034-.603 2.762-1.912 4.282-3.796C27.387 9.904 28.7 7.4 28.7 4.5a.5.5 0 0 0-.5-.5h-4.212c.003-.193.012-.382.012-.576V3zm-14.957.924h13.914c-.058 4.12-.757 7.907-1.977 10.623-.635 1.416-1.4 2.544-2.244 3.303C17.893 18.608 16.99 19 16 19c-.99 0-1.893-.392-2.736-1.15-.844-.759-1.61-1.887-2.246-3.303C9.798 11.83 9.1 8.045 9.043 3.924zM4.406 5h3.627c.136 3.31.698 6.357 1.62 8.838a16.67 16.67 0 0 1-2.723-2.654C5.585 9.516 4.554 7.38 4.406 5zm19.56 0h3.628c-.148 2.38-1.18 4.516-2.524 6.184-.9 1.115-1.883 1.999-2.726 2.656.922-2.481 1.487-5.529 1.623-8.84zm-8.581 15.055c.394.056.834.056 1.228 0-.117.27-.264.53-.228.884.067.67.557 1.081.957 1.387.364.279.653.422.713.453.009.043.02.091.02.162 0 .026-.005.034-.007.059h-4.136c-.002-.025-.008-.033-.008-.059 0-.07.01-.117.02-.16.077-.036.335-.147.687-.408.4-.297.885-.734.976-1.408.05-.366-.102-.634-.222-.91zM13.996 24h4.008c.05.965.129 1.778.469 2.281.186.277.517.502.763.719h-6.472c.246-.217.577-.442.763-.719.34-.503.42-1.316.47-2.281zM12 28h8.027v1H12v-1zm-1 2h10v1H11v-1z" />
+                            </svg>
+                            <div>
+                                <span className="block font-bold text-xl md:text-3xl">
+                                    {String(User.expYears).padStart(2, "0")}+
+                                </span>
+                                <span className="text-gray-900/70 text-sm md:text-base">
+                                    Year Exprience
+                                </span>
+                            </div>
+                        </div>
+                        <div className="w-1/2 flex items-center md:justify-center gap-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64"
+                                className="hidden md:block w-8 h-8 md:w-10 md:h-10 fill-gray-900"
+                            >
+                                <path
+                                    d="M56.1,11.92H44.51v-0.24c0-4.36-3.54-7.9-7.9-7.9h-9.21c-4.36,0-7.9,3.55-7.9,7.9v0.24H7.9c-4.36,0-7.9,3.55-7.9,7.9v32.5
+		c0,4.36,3.54,7.9,7.9,7.9h48.2c4.36,0,7.9-3.54,7.9-7.9v-32.5C64,15.46,60.46,11.92,56.1,11.92z M21.86,11.68
+		c0-3.05,2.48-5.53,5.53-5.53h9.21c3.05,0,5.53,2.48,5.53,5.53v0.24H21.86V11.68z M7.9,14.29h48.2c3.05,0,5.53,2.48,5.53,5.53v10.88
+		H37.98v-2.39c0-0.65-0.53-1.18-1.18-1.18h-9.58c-0.66,0-1.18,0.53-1.18,1.18v2.39H2.37V19.82C2.37,16.77,4.85,14.29,7.9,14.29z
+		 M35.61,29.5v4.77h-7.21V29.5H35.61z M56.1,57.86H7.9c-3.05,0-5.53-2.48-5.53-5.53V33.07h23.65v2.39c0,0.66,0.53,1.18,1.18,1.18
+		h9.58c0.65,0,1.18-0.53,1.18-1.18v-2.39h23.65v19.25C61.63,55.37,59.15,57.86,56.1,57.86z"
+                                />
+                            </svg>
+                            <div>
+                                <span className="block font-bold text-xl md:text-3xl">
+                                    {String(User.projectsCompleted).padStart(
+                                        2,
+                                        "0"
+                                    )}
+                                    +
+                                </span>
+                                <span className="text-gray-900/70 text-sm md:text-base">
+                                    Completed Projects
+                                </span>
+                            </div>
+                        </div>
+                    </main>
+                    <footer>
+                        <form
+                            method="get"
+                            action="/mahmoud_ibrahiam.pdf"
+                            className="flex justify-center"
+                        >
+                            <button
+                                type="submit"
+                                className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-8 py-2 bg-primary text-white font-medium rounded-lg"
+                            >
+                                <span>Download CV</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={1.5}
+                                    stroke="currentColor"
+                                    className="w-6 h-6"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                                    />
+                                </svg>
+                            </button>
+                        </form>
+                    </footer>
+                </section>
+            </main>
+        </section>
     );
 };
 export default About;

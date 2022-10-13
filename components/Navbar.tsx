@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as React from "react";
 
 const Navbar: React.FC = (): JSX.Element => {
@@ -59,8 +60,16 @@ const Navbar: React.FC = (): JSX.Element => {
                 ref={menu}
                 className="menu max-h-0 md:max-h-full overflow-hidden flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-6 font-medium w-full"
             >
-                <li className="cursor-pointer">About</li>
-                <li className="cursor-pointer">Skills</li>
+                <li className="cursor-pointer">
+                    <Link href="#about">
+                        <a>About</a>
+                    </Link>
+                </li>
+                <li className="cursor-pointer">
+                    <Link href="#skills">
+                        <a>Skills</a>
+                    </Link>
+                </li>
                 <li className="cursor-pointer">Projects</li>
                 <li className="cursor-pointer">Resume</li>
             </ul>

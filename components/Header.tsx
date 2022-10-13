@@ -5,7 +5,7 @@ const Header: React.FC = (): JSX.Element => {
     return (
         <header
             id="about"
-            className="flex flex-col md:flex-row items-center gap-2 md:gap-8 mb-4"
+            className="flex flex-col md:flex-row items-center gap-2 md:gap-8 mb-8"
         >
             <section className="order-2 flex flex-col w-full md:w-1/2 h-auto overflow-hidden">
                 <h1 className="text-4xl font-bold mb-1">
@@ -19,7 +19,7 @@ const Header: React.FC = (): JSX.Element => {
                 </p>
                 <a
                     href="mailto:cmahmoudv@gmail.com"
-                    className="block w-full md:w-1/2 text-center px-4 py-2 bg-primary text-white font-medium rounded-lg"
+                    className="inline-flex w-full md:w-fit text-center px-8 py-2 bg-primary text-white font-medium rounded-lg"
                 >
                     Contact Me
                 </a>
