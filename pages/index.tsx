@@ -11,6 +11,12 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>{User.name}</title>
+                <meta charSet="UTF-8" />
+                <meta name="owner" content={User.name} />
+                <meta name="language" content="EN" />
+                <meta name="reply-to" content={User.email} />
+                <meta content={User.description} name="description" />
+                <meta name="pagename" content={User.name} />
             </Head>
             <div className="container mx-auto px-4 md:px-16">
                 <Navbar />
