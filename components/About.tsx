@@ -4,7 +4,7 @@ import User from "data/me";
 const About: React.FC = (): JSX.Element => {
     return (
         <section id="about" className="w-full mb-8">
-            <main className="flex flex-col md:flex-row justify-between gap-4 p-4 rounded-lg shadow-md">
+            <main className="flex flex-col md:flex-row justify-between gap-4">
                 <section className="flex items-center justify-center">
                     <svg className="w-full md:max-w-fit h-52 rounded-lg">
                         <image
