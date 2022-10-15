@@ -3,8 +3,11 @@ import User from "data/me";
 
 const About: React.FC = (): JSX.Element => {
     return (
-        <section id="about" className="w-full mb-8">
-            <main className="flex flex-col md:flex-row justify-between gap-4">
+        <section className="w-full mb-12">
+            <main
+                id="about"
+                className="flex flex-col md:flex-row justify-between gap-4"
+            >
                 <section className="flex items-center justify-center">
                     <svg className="w-full md:max-w-fit h-52 rounded-lg">
                         <image
