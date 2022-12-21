@@ -75,7 +75,11 @@ const Navbar: React.FC = (): JSX.Element => {
                         Projects
                     </Link>
                 </li>
-                <li className="cursor-pointer">Resume</li>
+                <li className="cursor-pointer">
+                    <Link href="/mahmoud.pdf" download={true}>
+                        Resume
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
