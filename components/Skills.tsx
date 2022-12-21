@@ -28,7 +28,7 @@ const Skills: React.FC = (): JSX.Element => {
                         </h3>
                     </div>
                     <div className="flex flex-col gap-4">
-                        {User.frontendSkills.map((skill, idx) => (
+                        {User.frontendSkills?.map((skill, idx) => (
                             <ProgressBar
                                 name={skill.name}
                                 value={skill.value}
@@ -59,7 +59,7 @@ const Skills: React.FC = (): JSX.Element => {
                         </h3>
                     </div>
                     <div className="flex flex-col gap-4">
-                        {User.backendSkills.map((skill, idx) => (
+                        {User.backendSkills?.map((skill, idx) => (
                             <ProgressBar
                                 name={skill.name}
                                 value={skill.value}

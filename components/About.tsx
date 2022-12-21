@@ -74,7 +74,7 @@ const About: React.FC = (): JSX.Element => {
                     <footer>
                         <form
                             method="get"
-                            action="/mahmoud_ibrahiam.pdf"
+                            action="/mahmoud.pdf"
                             className="flex justify-center"
                         >
                             <button

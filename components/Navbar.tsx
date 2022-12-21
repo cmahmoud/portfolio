@@ -21,7 +21,7 @@ const Navbar: React.FC = (): JSX.Element => {
     return (
         <nav className="flex flex-col md:flex-row items-center justify-between py-4 gap-2">
             <div className="flex justify-between items-center w-full">
-                <h2 className="text-xl font-semibold">Mahmoud</h2>
+                <h2 className="text-xl font-semibold">Mahmoud Ibrahiam</h2>
                 <button className="md:hidden" onClick={collapseMenu}>
                     {isOpened ? (
                         <svg
@@ -70,7 +70,11 @@ const Navbar: React.FC = (): JSX.Element => {
                         <a>Skills</a>
                     </Link>
                 </li>
-                <li className="cursor-pointer">Projects</li>
+                <li className="cursor-pointer">
+                    <Link href="https://github.com/cmahmoud" target="_blank">
+                        Projects
+                    </Link>
+                </li>
                 <li className="cursor-pointer">Resume</li>
             </ul>
         </nav>
